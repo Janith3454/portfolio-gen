@@ -10,7 +10,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors({origin: '*'}))
 
-const dbURLI = 'mongodb+srv://janith_:Yj4xJMFlUPYpnXS9@portfolio-gen.sg7wl.mongodb.net/portfolio-gen?retryWrites=true&w=majority'
+//connection to the database
+const dbURLI = 'mongodb+srv://janith_:<password>@portfolio-gen.sg7wl.mongodb.net/portfolio-gen?retryWrites=true&w=majority'
 mongoose.connect(dbURLI)
   .then((result) => app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
